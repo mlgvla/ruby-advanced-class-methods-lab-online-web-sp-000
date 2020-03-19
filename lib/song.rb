@@ -53,6 +53,7 @@ class Song
     # binding.pry
     song.name = fn_array[1]
     # binding.pry
+    song
   end
 
 end

@@ -41,8 +41,32 @@ class Song
   end
 
   def self.alphabetical
-#    binding.pry
      @@all.sort_by {|song| song.name}
   end
+
+  def self.new_from_filename(filename)
+    filename.slice!(".mp3")
+    fn_array = filename.split(" - ")
+    song = self.create
+    song.artist_name = fn_array[0]
+    song.name = fn_array[1]
+    song
+  end
+
+  def self.create_from_filename(filename)
+    filename.slice!(".mp3")
+    fn_array = filename.split(" - ")
+    song = self.create
+    song.artist_name = fn_array[0]
+    song.name = fn_array[1]
+  end
+
+  def self.destroy_all
+    @@all.clear
+  end
+
+
+
+
 
 end

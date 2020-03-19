@@ -61,6 +61,12 @@ class Song
     song.name = fn_array[1]
   end
 
+  def self.destroy_all
+    @@all.clear
+  end
+
+  
+
 
 
 end

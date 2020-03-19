@@ -41,8 +41,15 @@ class Song
   end
 
   def self.alphabetical
-#    binding.pry
      @@all.sort_by {|song| song.name}
+  end
+
+  def self.new_from_filename(filename)
+    filename.slice!(".mp3")
+    artist_song = filename.split(" - ")
+    song = self.create
+    song.artist = artist_song[0]
+    song.name = artist_song[1]
   end
 
 end

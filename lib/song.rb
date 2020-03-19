@@ -48,11 +48,11 @@ class Song
     filename.slice!(".mp3")
     fn_array = filename.split(" - ")
     song = self.create
-    binding.pry
+    # binding.pry
     song.artist_name = fn_array[0]
-    binding.pry
+    # binding.pry
     song.name = fn_array[1]
-    binding.pry
+    # binding.pry
   end
 
 end
